@@ -1,0 +1,12 @@
+.showcase {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.showcaseContent {
+  height: 100vh;
+}
+
+.image {
+  border-radius: 50%;
+}

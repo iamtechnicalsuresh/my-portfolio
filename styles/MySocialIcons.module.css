@@ -1,0 +1,25 @@
+.socialIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  /* right: 0; */
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: var(--primary-font);
+  background-color: var(--secondary-bg);
+  margin: 0.5rem 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: all 0.1s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

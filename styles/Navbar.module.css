@@ -1,0 +1,61 @@
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5rem;
+}
+
+.brandLogo {
+  font-size: 2rem;
+}
+
+.navItems {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-font);
+  font-weight: bold;
+  padding: 0.5rem 0.4rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.navLink:hover {
+  color: red;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0.2rem;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.navLink:hover::before {
+  left: 0;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: linear-gradient(to right, gold, blue);
+}
+
+.navLink.active::before {
+  left: 0;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: linear-gradient(to right, gold, blue);
+}
+
+.navLink.active {
+  color: red;
+}

@@ -1,0 +1,29 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  color: var(--primary-font);
+  font-size: 1.2rem;
+}
+
+.formInput {
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  border: solid white 2px;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+  transition: all 0.1s ease;
+}
+
+.formInput:hover {
+  border: solid 2px blue;
+}
+
+.formInput:focus {
+  border: solid 2px blue;
+}

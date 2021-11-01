@@ -1,0 +1,15 @@
+.footer {
+}
+
+.allRightReserved {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+.allRightReserved__text {
+  color: var(--primary-font);
+  font-size: 1.4rem;
+}
