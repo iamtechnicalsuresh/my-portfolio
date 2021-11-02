@@ -6,7 +6,7 @@ import Meta from "../components/Meta";
 import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
-import Styles from "../styles/contact.module.css";
+import Styles from "../styles/Contact.module.css";
 import ErrorMessage from "../Components/ErrorMessage";
 import { motion } from "framer-motion";
 
