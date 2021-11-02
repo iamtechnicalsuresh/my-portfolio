@@ -1,14 +1,14 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { motion } from "framer-motion";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
 import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
-import Styles from "../styles/Contact.module.css";
-import ErrorMessage from "../Components/ErrorMessage";
-import { motion } from "framer-motion";
+import ErrorMessage from "../components/ErrorMessage";
+import Styles from "../styles/contact.module.css";
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required().label("First Name"),
