@@ -1,19 +1,30 @@
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+
   const router = useRouter();
   return (
     <nav className={Styles.mainNav}>
       <div className={Styles.brandLogo}>
         <Link href="/">
           <a>
-            <h1>LOGO</h1>
+            <Image src="/images/logo.png" width={200} height={50} />
           </a>
         </Link>
       </div>
-      <ul className={Styles.navItems}>
+      <ul
+        className={
+          click
+            ? `${Styles.navItems} ${Styles.navItemsOpen}`
+            : `${Styles.navItems}`
+        }
+      >
         <li className={Styles.navItem}>
           <Link href="/">
             <a
@@ -67,6 +78,13 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <div className={Styles.toggle} onClick={() => setClick(!click)}>
+        {click ? (
+          <FaTimes size={30} color="white" />
+        ) : (
+          <FaBars size={30} color="white" />
+        )}
+      </div>
     </nav>
   );
 };

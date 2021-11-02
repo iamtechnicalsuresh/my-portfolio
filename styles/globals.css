@@ -99,3 +99,33 @@ body {
 .border-radius {
   border-radius: var(--border-radius);
 }
+
+@media (max-width: 1200px) {
+  .grid-sm-col-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-sm-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-col-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-col-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .grid-col-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

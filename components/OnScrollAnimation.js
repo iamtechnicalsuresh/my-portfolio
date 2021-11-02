@@ -4,7 +4,7 @@ import { useAnimation } from "framer-motion";
 
 const OnScrollAnimation = () => {
   const controls = useAnimation();
-  const [element, view] = useInView({ threshold: 0.1 });
+  const [element, view] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (view) {

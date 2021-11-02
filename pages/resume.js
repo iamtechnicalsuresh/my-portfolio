@@ -186,7 +186,7 @@ const resume = () => {
                     text="2012 - PRESENT"
                     color="#333"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextHeading
                     text="THE MANN SCHOOL"
@@ -200,7 +200,7 @@ const resume = () => {
                     text="NETWORK ENGINEER"
                     color="#082032"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
@@ -216,7 +216,7 @@ const resume = () => {
                     text="2011 - 2012"
                     color="#333"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextHeading
                     text="INTRACTIVE 12"
@@ -230,7 +230,7 @@ const resume = () => {
                     text="NETWORK ENGINEER"
                     color="#082032"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
@@ -246,7 +246,7 @@ const resume = () => {
                     text="2010 - 2011"
                     color="#333"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextHeading
                     text="NEXUS Computers"
@@ -260,7 +260,7 @@ const resume = () => {
                     text="DESKTOP SUPPORT ENGINEER"
                     color="#082032"
                     fontSize="1rem"
-                    lineHeight="10px"
+                    lineHeight="20px"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"

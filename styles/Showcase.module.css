@@ -10,3 +10,9 @@
 .image {
   border-radius: 50%;
 }
+
+@media (max-width: 700px) {
+  .showcase {
+    text-align: center;
+  }
+}

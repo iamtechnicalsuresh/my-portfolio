@@ -25,8 +25,7 @@ const Home = () => {
       <section className="section mt-4" ref={element}>
         <TextHeading text="Progress Level" fontSize="2rem" />
         <motion.div
-          className="grid grid-col-2 grid-gap-1"
-          // className="grid grid-col-4 grid-gap-1"
+          className="grid grid-col-2 grid-gap-1 grid-col-1-sm"
           variants={zoomEffect}
           animate={control}
           transition={{ delay: 0.2, type: "tween" }}

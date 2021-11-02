@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Card from "../components/Card";
 import TextHeading from "../components/TextHeading";
@@ -8,6 +9,13 @@ import { zoomEffect } from "../styles/Animations";
 
 const AboutMe = () => {
   const [element, control] = OnScrollAnimation();
+  const [width, setWidth] = useState(false);
+
+  useEffect(() => {
+    if (innerWidth <= 550) {
+      setWidth(true);
+    }
+  }, []);
 
   return (
     <section ref={element}>
@@ -18,7 +26,7 @@ const AboutMe = () => {
         animate={control}
         transition={{ delay: 0.2, type: "tween" }}
       >
-        <Card direction="row">
+        <Card direction={width ? "column" : "row"}>
           <Image
             src="/images/SureshThapa.jpg"
             width={700}

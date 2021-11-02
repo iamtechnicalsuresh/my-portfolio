@@ -38,6 +38,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .educationInfo__content {
@@ -56,12 +57,6 @@
   padding: 2rem;
   background-color: #f8f4f4;
   width: 100%;
-}
-
-.exprience {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: flex-start; */
 }
 
 .exprience__content {
@@ -84,6 +79,8 @@
 
 .hobbies__contents {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -91,4 +88,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (max-width: 950px) {
+  .grid_col_15rem {
+    grid-template-columns: 1fr;
+  }
 }

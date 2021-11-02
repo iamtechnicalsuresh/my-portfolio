@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
 }
 
 .allRightReserved {
@@ -11,5 +12,5 @@
 
 .allRightReserved__text {
   color: var(--primary-font);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }

@@ -1,17 +1,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TextHeading from "../components/TextHeading";
+import SubTextHeading from "../components/SubTextHeading";
 import LinkButton from "../components/LinkButton";
 import MySocialIcons from "../components/MySocialIcons";
 import Styles from "../styles/Showcase.module.css";
-import OnScrollAnimation from "../components/OnScrollAnimation";
-import { zoomEffect, slidingLeft } from "../styles/Animations";
 
 const Showcase = () => {
   return (
     <section className={Styles.showcase}>
       <div
-        className={`grid grid-col-2 grid-align-center grid-justify-center ${Styles.showcaseContent}`}
+        className={`grid grid-col-2 grid-align-center grid-justify-center grid-sm-col-1 ${Styles.showcaseContent}`}
       >
         <motion.div
           className="showcase-left"
@@ -46,24 +45,24 @@ const Showcase = () => {
             fontWeight="bold"
             className="my-1"
           />
-          <TextHeading
+          <SubTextHeading
             text="I'am Suresh Thapa"
-            fontSize="3rem"
+            fontSize="2rem"
             fontWeight="bold"
-            margin="2rem"
+            margin="1rem"
             color="green"
           />
           <TextHeading
             text="Network Engineer &"
-            fontSize="2.5rem"
+            fontSize="2rem"
             fontWeight="bold"
             color="red"
           />
           <TextHeading
             text="Full Stack Developer"
-            fontSize="2.5rem"
+            fontSize="2rem"
             fontWeight="bold"
-            margin="2rem"
+            margin="1rem"
             color="red"
           />
           <LinkButton
