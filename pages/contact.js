@@ -7,7 +7,7 @@ import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
 import Styles from "../styles/contact.module.css";
-import ErrorMessage from "../components/ErrorMessage";
+import ErrorMessage from "../Components/ErrorMessage";
 import { motion } from "framer-motion";
 
 const validationSchema = Yup.object().shape({
