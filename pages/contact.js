@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
-import Styles from "../styles/contact.module.css";
 import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
@@ -23,7 +22,7 @@ const contact = () => {
   return (
     <Layout>
       <Meta title="Contact" />
-      <section className={Styles.contactSection}>
+      <section className="section">
         <TextHeading text="Contact Us" fontSize="2.5rem" margin="2rem" />
         <motion.div
           className="grid grid-col-2"
