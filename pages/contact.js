@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
+import Styles from "../styles/contact.module.css";
 import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
 import ErrorMessage from "../components/ErrorMessage";
-import Styles from "../styles/contact.module.css";
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required().label("First Name"),
