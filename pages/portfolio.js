@@ -21,7 +21,7 @@ const portfolio = () => {
         >
           <Card>
             <FaPython size={80} color="white" />
-            <div className="mx-3 mt-1 text-center">
+            <div className="mx-1 mt-1 text-center">
               <TextHeading text="Python Network Automation" fontSize="1.2rem" />
               <TextDescription
                 text="Cisco and Juniper network Automation using Python Nornir and Netmiko."
@@ -37,7 +37,7 @@ const portfolio = () => {
           </Card>
           <Card>
             <FaCode size={80} color="white" />
-            <div className="mx-3 mt-1 text-center">
+            <div className="mx-1 mt-1 text-center">
               <TextHeading text="Webside Design" fontSize="1.2rem" />
               <TextDescription
                 text="Web devlopment using HTML, CSS and Javascript."
@@ -53,7 +53,7 @@ const portfolio = () => {
           </Card>
           <Card>
             <FaNodeJs size={80} color="white" />
-            <div className="mx-3 mt-1 text-center">
+            <div className="mx-1 mt-1 text-center">
               <TextHeading text="E-Commerce" fontSize="1.2rem" />
               <TextDescription
                 text="Full stack E-Commerce Website using (MongoDb, Express, React and NodeJs)."
@@ -69,7 +69,7 @@ const portfolio = () => {
           </Card>
           <Card>
             <FaReact size={80} color="white" />
-            <div className="mx-3 mt-1 text-center">
+            <div className="mx-1 mt-1 text-center">
               <TextHeading text="Portfolio Website" fontSize="1.2rem" />
               <TextDescription
                 text="PortFolio website using NextJs."
@@ -85,7 +85,7 @@ const portfolio = () => {
           </Card>
           <Card>
             <FaReact size={80} color="white" />
-            <div className="mx-3 mt-1 text-center">
+            <div className="mx-1 mt-1 text-center">
               <TextHeading text="Mobile App" fontSize="1.2rem" />
               <TextDescription
                 text="Mobile App using React Native."

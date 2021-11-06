@@ -25,8 +25,8 @@ const Showcase = () => {
           <Image
             src="/images/SureshThapa.jpg"
             className={Styles.image}
-            width={400}
-            height={400}
+            width={350}
+            height={350}
           />
         </motion.div>
         <motion.div

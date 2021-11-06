@@ -7,7 +7,7 @@ import TextDescription from "../components/TextDescription";
 import OnScrollAnimation from "../components/OnScrollAnimation";
 import { zoomEffect } from "../styles/Animations";
 
-const AboutMe = () => {
+const AboutMe = ({ aboutMe }) => {
   const [element, control] = OnScrollAnimation();
   const [width, setWidth] = useState(false);
 
@@ -28,20 +28,17 @@ const AboutMe = () => {
       >
         <Card direction={width ? "column" : "row"}>
           <Image
-            src="/images/SureshThapa.jpg"
+            src={`/images/${aboutMe.image}`}
             width={700}
             height={700}
             className="border-radius"
           />
           <div className="p-3">
-            <TextHeading text="Suresh Thapa" fontSize="2.5rem" />
-            <TextHeading text="Network Engineer" />
+            <TextHeading text={aboutMe.fullname} fontSize="2.5rem" />
+            <TextHeading text={aboutMe.designation} />
+            <TextDescription text={aboutMe.description} textAlign="justify" />
             <TextDescription
-              text="I am Cisco and Juniper network engineeer. Working knowledge in Cisco and Juniper switches and routers, Sonicwall Firewall, Server 2008 to 2016 (Active Directory, DNS, DHCP, Radius CA) and Network automation using Python Nornir and Netmiko."
-              textAlign="justify"
-            />
-            <TextDescription
-              text="Extra Skill : HTML, CSS, Javascript, NodeJS, ReactJS, NextJS, ExpressJS"
+              text={`Extra Skill : ${aboutMe.extraskills}`}
               fontSize="1rem"
             />
           </div>

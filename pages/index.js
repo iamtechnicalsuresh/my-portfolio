@@ -11,6 +11,7 @@ import { zoomEffect } from "../styles/Animations";
 import Showcase from "../components/Showcase";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
+import { skills, aboutMe } from "../data/data";
 
 const Home = () => {
   const [element, control] = OnScrollAnimation();
@@ -19,8 +20,8 @@ const Home = () => {
     <Layout>
       <Meta title="Home" />
       <Showcase />
-      <AboutMe />
-      <Skills />
+      <AboutMe aboutMe={aboutMe} />
+      <Skills skillsData={skills} />
 
       <section className="section mt-4" ref={element}>
         <TextHeading text="Progress Level" fontSize="2rem" />
