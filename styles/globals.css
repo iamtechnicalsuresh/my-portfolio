@@ -28,8 +28,24 @@ body {
   padding-bottom: 2rem;
 }
 
+.width-100 {
+  width: 100%;
+}
+
 .rounded-radius {
   border-radius: 50%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-justify-space-between {
+  justify-content: space-between;
+}
+
+.flex-align-item-center {
+  align-items: center;
 }
 
 .grid {
@@ -96,8 +112,20 @@ body {
   margin-bottom: 2rem;
 }
 
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
 .p-3 {
   padding: 3rem;
+}
+
+.px-1 {
+  padding: 0 1rem;
 }
 
 .text-center {

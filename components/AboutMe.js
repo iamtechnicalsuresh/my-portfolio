@@ -33,7 +33,7 @@ const AboutMe = ({ aboutMe }) => {
             height={700}
             className="border-radius"
           />
-          <div className="p-3">
+          <div className="p-1">
             <TextHeading text={aboutMe.fullname} fontSize="2.5rem" />
             <TextHeading text={aboutMe.designation} />
             <TextDescription text={aboutMe.description} textAlign="justify" />

@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 import { motion } from "framer-motion";
@@ -10,6 +11,7 @@ import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
 import ErrorMessage from "../components/ErrorMessage";
+import Card from "../components/Card";
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required().label("First Name"),
@@ -28,95 +30,149 @@ const contact = () => {
     <Layout>
       <Meta title="Contact" />
       <section className="section">
-        <TextHeading text="Contact Us" fontSize="2.5rem" margin="2rem" />
-        <motion.div
-          className="grid grid-col-2"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{
-            type: "spring",
-            duration: 2,
-            bounce: 0.3,
-          }}
-        >
-          <Formik
-            initialValues={{
-              firstname: "",
-              lastname: "",
-              email: "",
-              mobile: "",
-              purpose: "",
-              message: "",
+        <TextHeading text="CONTACT US" fontSize="2rem" margin="2rem" />
+        <div className="grid grid-col-2 grid-gap-1">
+          <motion.div
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0 }}
+            transition={{
+              type: "spring",
+              duration: 2,
+              bounce: 0.3,
             }}
-            validationSchema={validationSchema}
-            onSubmit={(values) => console.log(values)}
           >
-            {({ values, handleSubmit, handleChange, errors, touched }) => (
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-col-2 grid-gap-1">
-                  <div>
-                    <TextInput
-                      title="First Name"
-                      name="firstname"
-                      type="text"
-                      placeHolder="First Name"
-                      value={values.firstname}
-                      onChange={handleChange}
-                    />
-                    {<ErrorMessage message={errors.firstname} />}
+            <Formik
+              initialValues={{
+                firstname: "",
+                lastname: "",
+                email: "",
+                mobile: "",
+                purpose: "",
+                message: "",
+              }}
+              validationSchema={validationSchema}
+              onSubmit={(values) => console.log(values)}
+            >
+              {({ values, handleSubmit, handleChange, errors, touched }) => (
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-col-2 grid-gap-1">
+                    <div>
+                      <TextInput
+                        title="First Name"
+                        name="firstname"
+                        type="text"
+                        placeHolder="First Name"
+                        value={values.firstname}
+                        onChange={handleChange}
+                      />
+                      {<ErrorMessage message={errors.firstname} />}
+                    </div>
+                    <div>
+                      <TextInput
+                        title="Last Name"
+                        name="lastname"
+                        type="text"
+                        placeHolder="Last Name"
+                        value={values.lastname}
+                        onChange={handleChange}
+                      />
+                      {<ErrorMessage message={errors.lastname} />}
+                    </div>
                   </div>
-                  <div>
-                    <TextInput
-                      title="Last Name"
-                      name="lastname"
-                      type="text"
-                      placeHolder="Last Name"
-                      value={values.lastname}
-                      onChange={handleChange}
-                    />
-                    {<ErrorMessage message={errors.lastname} />}
-                  </div>
-                </div>
-                <TextInput
-                  title="Email"
-                  name="email"
-                  type="email"
-                  placeHolder="Email Address"
-                  value={values.email}
-                  onChange={handleChange}
+                  <TextInput
+                    title="Email"
+                    name="email"
+                    type="email"
+                    placeHolder="Email Address"
+                    value={values.email}
+                    onChange={handleChange}
+                  />
+                  {<ErrorMessage message={errors.email} />}
+                  <TextInput
+                    title="Mobile"
+                    name="mobile"
+                    type="text"
+                    placeHolder="Mobile"
+                    value={values.mobile}
+                    onChange={handleChange}
+                  />
+                  {<ErrorMessage message={errors.mobile} />}
+                  <TextInput
+                    title="Purpose"
+                    name="purpose"
+                    type="text"
+                    placeHolder="Purpose"
+                    value={values.purpose}
+                    onChange={handleChange}
+                  />
+                  {<ErrorMessage message={errors.purpose} />}
+                  <TextArea
+                    title="Message"
+                    name="message"
+                    placeHolder="Your Message....."
+                    value={values.message}
+                    onChange={handleChange}
+                  />
+                  {<ErrorMessage message={errors.message} />}
+                  <Button title="Submit" />
+                </form>
+              )}
+            </Formik>
+          </motion.div>
+          <motion.div
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{
+              type: "spring",
+              duration: 2,
+              bounce: 0.3,
+            }}
+          >
+            <TextHeading text="CONTACT INFORMATION" />
+            <Card>
+              <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
+                <FaUser size={20} color="white" />
+                <TextHeading
+                  text="Suresh Thapa"
+                  color="white"
+                  fontWeight="normal"
+                  fontSize="1.2rem"
+                  lineHeight="20px"
                 />
-                {<ErrorMessage message={errors.email} />}
-                <TextInput
-                  title="Mobile"
-                  name="mobile"
-                  type="text"
-                  placeHolder="Mobile"
-                  value={values.mobile}
-                  onChange={handleChange}
+              </div>
+              <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
+                <FaPhoneAlt size={20} color="white" />
+                <TextHeading
+                  text="8899774455"
+                  color="white"
+                  fontWeight="normal"
+                  fontSize="1.2rem"
+                  lineHeight="20px"
                 />
-                {<ErrorMessage message={errors.mobile} />}
-                <TextInput
-                  title="Purpose"
-                  name="purpose"
-                  type="text"
-                  placeHolder="Purpose"
-                  value={values.purpose}
-                  onChange={handleChange}
+              </div>
+              <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
+                <FaEnvelope size={20} color="white" />
+                <TextHeading
+                  text="iamtechnicalsuresh@gmail.com"
+                  color="white"
+                  fontWeight="normal"
+                  fontSize="1.2rem"
+                  lineHeight="20px"
                 />
-                {<ErrorMessage message={errors.purpose} />}
-                <TextArea
-                  title="Message"
-                  name="message"
-                  placeHolder="Your Message....."
-                  value={values.message}
-                  onChange={handleChange}
+              </div>
+              <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
+                <FaMapMarkedAlt size={20} color="white" />
+                <TextHeading
+                  text="New Delhi, India"
+                  color="white"
+                  fontWeight="normal"
+                  fontSize="1.2rem"
+                  lineHeight="20px"
                 />
-                {<ErrorMessage message={errors.message} />}
-                <Button title="Submit" />
-              </form>
-            )}
-          </Formik>
-        </motion.div>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
       </section>
     </Layout>
   );
