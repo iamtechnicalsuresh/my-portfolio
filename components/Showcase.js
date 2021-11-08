@@ -15,7 +15,6 @@ const Showcase = () => {
   const [ref, view] = useInView({ rootMargin: "-200px" });
 
   useEffect(() => {
-    console.log(!view);
     if (view) {
       dispatch(setStickyNav(true));
     } else {

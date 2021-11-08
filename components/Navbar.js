@@ -10,7 +10,6 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   const navbar = useSelector((state) => state.navbar);
   const { stickyNav } = navbar;
-  console.log(stickyNav, "Nav");
 
   const router = useRouter();
   return (
