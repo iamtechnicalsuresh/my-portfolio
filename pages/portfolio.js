@@ -1,4 +1,6 @@
 import { FaCode, FaPython, FaNodeJs, FaReact, FaNeos } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import TextHeading from "../components/TextHeading";
@@ -8,6 +10,9 @@ import LinkButton from "../components/LinkButton";
 import Meta from "../components/Meta";
 
 const portfolio = () => {
+  const dispatch = useDispatch();
+  dispatch(setStickyNav(true));
+
   return (
     <Layout>
       <Meta title="Portfolio" />

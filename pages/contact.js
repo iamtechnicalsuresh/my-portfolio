@@ -1,5 +1,7 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
 import Layout from "../components/Layout";
@@ -19,6 +21,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const contact = () => {
+  const dispatch = useDispatch();
+  dispatch(setStickyNav(true));
+
   return (
     <Layout>
       <Meta title="Contact" />

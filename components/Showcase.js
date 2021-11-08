@@ -12,13 +12,13 @@ import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 
 const Showcase = () => {
   const dispatch = useDispatch();
-  const [ref, view] = useInView({ rootMargin: "-200px" });
+  const [ref, view] = useInView({ rootMargin: "-100px" });
 
   useEffect(() => {
-    if (view) {
-      dispatch(setStickyNav(true));
-    } else {
+    if (!view) {
       dispatch(setStickyNav(false));
+    } else {
+      dispatch(setStickyNav(true));
     }
   }, [view, dispatch]);
 

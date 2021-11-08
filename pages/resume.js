@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useDispatch } from "react-redux";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -17,8 +18,12 @@ import TextHeading from "../components/TextHeading";
 import TextDescription from "../components/TextDescription";
 import ProgressBar from "../components/ProgressBar";
 import Styles from "../styles/resume.module.css";
+import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 
 const resume = () => {
+  const dispatch = useDispatch();
+  dispatch(setStickyNav(true));
+
   return (
     <Layout>
       <Meta title="Resume" />
