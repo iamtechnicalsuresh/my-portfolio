@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -7,10 +8,19 @@ import Styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const navbar = useSelector((state) => state.navbar);
+  const { stickyNav } = navbar;
+  console.log(stickyNav, "Nav");
 
   const router = useRouter();
   return (
-    <nav className={Styles.mainNav}>
+    <nav
+      className={
+        stickyNav
+          ? `${Styles.mainNav}`
+          : `${Styles.mainNav} ${Styles.mainNavFixed}`
+      }
+    >
       <div className={Styles.brandLogo}>
         <Link href="/">
           <a>

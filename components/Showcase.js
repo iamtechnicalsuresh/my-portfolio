@@ -1,14 +1,30 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import TextHeading from "../components/TextHeading";
 import SubTextHeading from "../components/SubTextHeading";
 import LinkButton from "../components/LinkButton";
 import MySocialIcons from "../components/MySocialIcons";
 import Styles from "../styles/Showcase.module.css";
+import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 
 const Showcase = () => {
+  const dispatch = useDispatch();
+  const [ref, view] = useInView({ rootMargin: "-200px" });
+
+  useEffect(() => {
+    console.log(!view);
+    if (view) {
+      dispatch(setStickyNav(true));
+    } else {
+      dispatch(setStickyNav(false));
+    }
+  }, [view, dispatch]);
+
   return (
-    <section className={Styles.showcase}>
+    <section className={Styles.showcase} ref={ref}>
       <div
         className={`grid grid-col-2 grid-align-center grid-justify-center grid-sm-col-1 ${Styles.showcaseContent}`}
       >
