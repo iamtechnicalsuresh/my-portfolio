@@ -31,7 +31,7 @@ const contact = () => {
       <Meta title="Contact" />
       <section className="section">
         <TextHeading text="CONTACT US" fontSize="2rem" margin="2rem" />
-        <div className="grid grid-col-2 grid-gap-1">
+        <div className="grid grid-col-2 gap-2">
           <motion.div
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}

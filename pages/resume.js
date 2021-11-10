@@ -103,7 +103,7 @@ const resume = () => {
                   text="2014"
                   fontSize="1rem"
                   fontWeight="bold"
-                  color="blue"
+                  color=" deepskyblue"
                   lineHeight="15px"
                 />
                 <TextHeading
@@ -123,7 +123,7 @@ const resume = () => {
                   text="2011"
                   fontSize="1rem"
                   fontWeight="bold"
-                  color="blue"
+                  color=" deepskyblue"
                   lineHeight="15px"
                 />
                 <TextHeading
@@ -143,7 +143,7 @@ const resume = () => {
                   text="2008"
                   fontSize="1rem"
                   fontWeight="bold"
-                  color="blue"
+                  color=" deepskyblue"
                   lineHeight="15px"
                 />
                 <TextHeading
