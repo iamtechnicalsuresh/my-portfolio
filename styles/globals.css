@@ -23,23 +23,15 @@ body {
   --hover: #233f55;
 }
 
-.dark-theme {
-  --primary-bg: #082032;
-  --secondary-bg: #0b2a42;
-  --primary-font: #f8f4f4;
-  --font-color-dark: #333;
-  --border-radius: 0.5rem;
-  --btn-primary: #2e76cf;
-}
-
 .light-theme {
-  --primary-bg: #cc9999;
-  --secondary-bg: #c08080;
+  --primary-bg: #c08080;
+  /* --secondary-bg: #c08080; */
+  --secondary-bg: #a64d4d;
   --primary-font: #fff;
   --font-color-dark: #333;
   --border-radius: 0.5rem;
   --btn-primary: #2e76cf;
-  --hover: #a64d4d;
+  --hover: #c08080;
 }
 
 .section {
