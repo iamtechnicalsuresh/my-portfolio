@@ -1,15 +1,22 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
+import { setThemeSwitch } from "../redux/miscellaneous/navbarSlice";
 import { useRouter } from "next/router";
+
 import Styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const [click, setClick] = useState(false);
   const navbar = useSelector((state) => state.navbar);
-  const { stickyNav } = navbar;
+  const { stickyNav, themeSwitch } = navbar;
+
+  const themeSwitchHandler = () => {
+    dispatch(setThemeSwitch(!themeSwitch));
+  };
 
   const router = useRouter();
   return (
@@ -85,6 +92,13 @@ const Navbar = () => {
               Contact
             </a>
           </Link>
+        </li>
+        <li className={Styles.navItem} onClick={themeSwitchHandler}>
+          {themeSwitch ? (
+            <FaMoon size={25} color="white" />
+          ) : (
+            <FaSun size={25} color="white" />
+          )}
         </li>
       </ul>
       <div className={Styles.toggle} onClick={() => setClick(!click)}>

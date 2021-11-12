@@ -19,7 +19,12 @@ const AboutMe = ({ aboutMe }) => {
 
   return (
     <section ref={element}>
-      <TextHeading text="About Me" fontSize="2rem" margin="2rem" />
+      <TextHeading
+        text="About Me"
+        fontSize="2rem"
+        margin="2rem"
+        fontWeight="bold"
+      />
       <motion.div
         className="grid grid-col-1 grid-align-center mb-2"
         variants={zoomEffect}
@@ -34,7 +39,11 @@ const AboutMe = ({ aboutMe }) => {
             className="border-radius"
           />
           <div className="p-1">
-            <TextHeading text={aboutMe.fullname} fontSize="2.5rem" />
+            <TextHeading
+              text={aboutMe.fullname}
+              fontSize="2.5rem"
+              fontWeight="bolder"
+            />
             <TextHeading text={aboutMe.designation} />
             <TextDescription text={aboutMe.description} textAlign="justify" />
             <TextDescription

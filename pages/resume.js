@@ -46,7 +46,7 @@ const resume = () => {
               className="rounded-radius"
             />
             <div className={Styles.details}>
-              <TextHeading text="Suresh Thapa" />
+              <TextHeading text="Suresh Thapa" fontWeight="bold" />
               <TextDescription text="Network Engineer" />
               <TextDescription
                 text="& Full Stack Web Developer"
@@ -54,7 +54,7 @@ const resume = () => {
               />
             </div>
             <div className={Styles.contactInfo}>
-              <TextHeading text="Contact Info" />
+              <TextHeading text="Contact Info" fontWeight="bold" />
               <div className={Styles.contactInfo__content}>
                 <FaPhoneAlt size={20} color="white" />
                 <TextDescription
@@ -97,7 +97,7 @@ const resume = () => {
               </div>
             </div>
             <div className={Styles.educationInfo}>
-              <TextHeading text="Education" margin="1rem" />
+              <TextHeading text="Education" margin="1rem" fontWeight="bold" />
               <div className={Styles.educationInfo__content}>
                 <TextDescription
                   text="2014"
@@ -176,7 +176,7 @@ const resume = () => {
             }}
           >
             <div>
-              <TextHeading text="PROFILE" color="#082032" />
+              <TextHeading text="PROFILE" color="#082032" fontWeight="bold" />
               <TextDescription
                 text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
                 color="#333"
@@ -184,7 +184,11 @@ const resume = () => {
               />
             </div>
             <div className={`${Styles.exprience} mt-3`}>
-              <TextHeading text="EXPERIENCE" color="#082032" />
+              <TextHeading
+                text="EXPERIENCE"
+                color="#082032"
+                fontWeight="bold"
+              />
               <div className={Styles.exprience__content}>
                 <div className={Styles.exprience__content_left}>
                   <TextHeading
@@ -192,12 +196,14 @@ const resume = () => {
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextHeading
                     text="THE MANN SCHOOL"
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                 </div>
                 <div className={Styles.exprience__content_right}>
@@ -206,6 +212,7 @@ const resume = () => {
                     color="#082032"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
@@ -222,12 +229,14 @@ const resume = () => {
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextHeading
                     text="INTRACTIVE 12"
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                 </div>
                 <div className={Styles.exprience__content_right}>
@@ -236,12 +245,14 @@ const resume = () => {
                     color="#082032"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
                     color="#333"
                     lineHeight="20px"
                     fontWeight="normal"
+                    fontWeight="bold"
                   />
                 </div>
               </div>
@@ -252,12 +263,14 @@ const resume = () => {
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextHeading
                     text="NEXUS Computers"
                     color="#333"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                 </div>
                 <div className={Styles.exprience__content_right}>
@@ -266,6 +279,7 @@ const resume = () => {
                     color="#082032"
                     fontSize="1rem"
                     lineHeight="20px"
+                    fontWeight="bold"
                   />
                   <TextDescription
                     text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
@@ -277,7 +291,11 @@ const resume = () => {
               </div>
             </div>
             <div className={`mt-3`}>
-              <TextHeading text="PROFESSIONAL SKILLS" color="#082032" />
+              <TextHeading
+                text="PROFESSIONAL SKILLS"
+                color="#082032"
+                fontWeight="bold"
+              />
               <ProgressBar
                 title="CSS3"
                 width="70%"
@@ -317,7 +335,7 @@ const resume = () => {
             </div>
             <div className={`${Styles.hobbies} mt-3`}>
               <div>
-                <TextHeading text="HOBBIES" color="#082032" />
+                <TextHeading text="HOBBIES" color="#082032" fontWeight="bold" />
               </div>
               <div className={Styles.hobbies__contents}>
                 <div className={Styles.hobbies__content}>

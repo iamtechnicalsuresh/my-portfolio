@@ -17,7 +17,12 @@ const Skills = ({ skillsData }) => {
   const [element, control] = OnScrollAnimation();
   return (
     <section className="section mt-4" ref={element}>
-      <TextHeading text="Skills" fontSize="2rem" margin="2rem" />
+      <TextHeading
+        text="Skills"
+        fontSize="2rem"
+        margin="2rem"
+        fontWeight="bold"
+      />
       <motion.div
         className="grid grid-col-4 grid-gap-1"
         variants={zoomEffect}
@@ -28,7 +33,11 @@ const Skills = ({ skillsData }) => {
           <Card key={skill.id}>
             {skill.icon}
             <div className="mx-2 mt-1 text-center">
-              <TextHeading text={skill.title} fontSize="1.2rem" />
+              <TextHeading
+                text={skill.title}
+                fontSize="1.2rem"
+                fontWeight="bold"
+              />
               <TextDescription
                 text={skill.description}
                 fontSize="0.8rem"

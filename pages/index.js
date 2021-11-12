@@ -24,15 +24,15 @@ const Home = () => {
       <Skills skillsData={skills} />
 
       <section className="section mt-4" ref={element}>
-        <TextHeading text="Progress Level" fontSize="2rem" />
+        <TextHeading text="Progress Level" fontSize="2rem" fontWeight="bold" />
         <motion.div
           className="grid grid-col-2 grid-gap-1 grid-col-1-sm"
           variants={zoomEffect}
           animate={control}
-          transition={{ delay: 0.2, type: "tween" }}
+          transition={{ delay: 0.5, type: "tween" }}
         >
           <Card>
-            <TextHeading text="Network Engineer Skills" />
+            <TextHeading text="Network Engineer Skills" fontWeight="bold" />
             <ProgressBar
               title="Juniper Routing Switching"
               width="70%"
@@ -53,7 +53,7 @@ const Home = () => {
             <ProgressBar title="Linux" width="40%" fontSize="1rem" />
           </Card>
           <Card>
-            <TextHeading text="Programming Skills" />
+            <TextHeading text="Programming Skills" fontWeight="bold" />
             <ProgressBar title="HTML and CSS" width="80%" fontSize="1rem" />
             <ProgressBar title="Javascript" width="80%" fontSize="1rem" />
             <ProgressBar title="React Js" width="60%" fontSize="1rem" />

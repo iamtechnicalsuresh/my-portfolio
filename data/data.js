@@ -7,6 +7,16 @@ import {
   FaNeos,
 } from "react-icons/fa";
 
+export const aboutMe = {
+  id: 1,
+  fullname: "Suresh Thapa",
+  designation: "Network Engineer",
+  description:
+    "I am Cisco and Juniper network engineeer. Working knowledge in Cisco and Juniper switches and routers, Sonicwall Firewall, Server 2008 to 2016 (Active Directory, DNS, DHCP, Radius CA) and Network automation using Python Nornir and Netmiko.",
+  image: "SureshThapa.jpg",
+  extraskills: "HTML, CSS, Javascript, NodeJS, ReactJS, NextJS, ExpressJS",
+};
+
 export const skills = [
   {
     id: 1,
@@ -56,13 +66,3 @@ export const skills = [
     icon: <FaPython size={80} color="white" />,
   },
 ];
-
-export const aboutMe = {
-  id: 1,
-  fullname: "Suresh Thapa",
-  designation: "Network Engineer",
-  description:
-    "I am Cisco and Juniper network engineeer. Working knowledge in Cisco and Juniper switches and routers, Sonicwall Firewall, Server 2008 to 2016 (Active Directory, DNS, DHCP, Radius CA) and Network automation using Python Nornir and Netmiko.",
-  image: "SureshThapa.jpg",
-  extraskills: "HTML, CSS, Javascript, NodeJS, ReactJS, NextJS, ExpressJS",
-};

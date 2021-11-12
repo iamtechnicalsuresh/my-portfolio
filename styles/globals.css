@@ -7,7 +7,7 @@
 body {
   font-size: 10px;
   font-family: "Roboto", sans-serif;
-  background-color: var(--primary-bg);
+  /* background-color: var(--primary-bg); */
   letter-spacing: 1px;
   line-height: 35px;
   overflow-x: hidden;
@@ -20,6 +20,26 @@ body {
   --font-color-dark: #333;
   --border-radius: 0.5rem;
   --btn-primary: #2e76cf;
+  --hover: #233f55;
+}
+
+.dark-theme {
+  --primary-bg: #082032;
+  --secondary-bg: #0b2a42;
+  --primary-font: #f8f4f4;
+  --font-color-dark: #333;
+  --border-radius: 0.5rem;
+  --btn-primary: #2e76cf;
+}
+
+.light-theme {
+  --primary-bg: #cc9999;
+  --secondary-bg: #c08080;
+  --primary-font: #fff;
+  --font-color-dark: #333;
+  --border-radius: 0.5rem;
+  --btn-primary: #2e76cf;
+  --hover: #a64d4d;
 }
 
 .section {
