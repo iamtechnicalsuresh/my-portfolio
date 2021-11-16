@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className={Styles.brandLogo}>
         <Link href="/">
           <a>
-            <Image src="/images/logo.png" width={200} height={50} />
+            <Image src="/images/logo.png" width={200} height={50} alt="Logo" />
           </a>
         </Link>
       </div>

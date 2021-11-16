@@ -42,6 +42,7 @@ const Showcase = () => {
             width={350}
             height={350}
             className={Styles.image}
+            alt="Showcase Image"
           />
         </motion.div>
         <motion.div

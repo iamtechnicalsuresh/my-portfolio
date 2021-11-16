@@ -37,6 +37,7 @@ const AboutMe = ({ aboutMe }) => {
             width={700}
             height={700}
             className="border-radius"
+            alt="About Me Pic"
           />
           <div className="p-1">
             <TextHeading
