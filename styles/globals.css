@@ -24,6 +24,7 @@ body {
 }
 
 .light-theme {
+  /* --primary-bg: #fff4f4; */
   --primary-bg: #c08080;
   /* --secondary-bg: #c08080; */
   --secondary-bg: #a64d4d;

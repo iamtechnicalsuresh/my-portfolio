@@ -39,13 +39,13 @@ const Showcase = () => {
         >
           <Image
             src="/images/SureshThapa.jpg"
-            className={Styles.image}
             width={350}
             height={350}
+            className={Styles.image}
           />
         </motion.div>
         <motion.div
-          className="showcase-left"
+          className={Styles.showcaseRight}
           initial={{ x: "100vw" }}
           animate={{ x: 0 }}
           transition={{
@@ -61,9 +61,9 @@ const Showcase = () => {
             className="my-1"
           />
           <SubTextHeading
-            text="I'am Suresh Thapa"
+            text="I'm Suresh Thapa"
             fontSize="2rem"
-            fontWeight="bold"
+            fontWeight="bolder"
             margin="1rem"
             color="green"
           />

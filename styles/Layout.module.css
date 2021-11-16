@@ -1,5 +1,7 @@
 .main {
   background-color: var(--primary-bg);
+  width: 100%;
+  max-width: 0 auto;
 }
 
 .container {

@@ -252,7 +252,6 @@ const resume = () => {
                     color="#333"
                     lineHeight="20px"
                     fontWeight="normal"
-                    fontWeight="bold"
                   />
                 </div>
               </div>

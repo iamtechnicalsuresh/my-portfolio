@@ -10,6 +10,7 @@ import Meta from "../components/Meta";
 import TextArea from "../components/TextArea";
 import TextInput from "../components/TextInput";
 import TextHeading from "../components/TextHeading";
+import TextDescription from "../components/TextDescription";
 import ErrorMessage from "../components/ErrorMessage";
 import Card from "../components/Card";
 
@@ -30,7 +31,12 @@ const contact = () => {
     <Layout>
       <Meta title="Contact" />
       <section className="section">
-        <TextHeading text="CONTACT US" fontSize="2rem" margin="2rem" />
+        <TextHeading
+          text="CONTACT US"
+          fontSize="2rem"
+          margin="2rem"
+          fontWeight="bold"
+        />
         <div className="grid grid-col-2 gap-2">
           <motion.div
             initial={{ x: "-100vw" }}
@@ -128,7 +134,7 @@ const contact = () => {
               bounce: 0.3,
             }}
           >
-            <TextHeading text="CONTACT INFORMATION" />
+            <TextHeading text="CONTACT INFORMATION" fontWeight="bold" />
             <Card>
               <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
                 <FaUser size={20} color="white" />
@@ -152,11 +158,11 @@ const contact = () => {
               </div>
               <div className="flex flex-align-item-center grid-gap-1 width-100 px-1">
                 <FaEnvelope size={20} color="white" />
-                <TextHeading
+                <TextDescription
                   text="iamtechnicalsuresh@gmail.com"
                   color="white"
                   fontWeight="normal"
-                  fontSize="1.2rem"
+                  fontSize="0.8rem"
                   lineHeight="20px"
                 />
               </div>
