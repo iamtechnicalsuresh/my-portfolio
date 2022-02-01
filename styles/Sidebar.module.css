@@ -1,0 +1,53 @@
+.sidebar {
+  width: 15rem;
+  min-height: 100vh;
+  background-color: var(--secondary-bg);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profile_pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.profile_pic__image {
+  border-radius: 50%;
+  border: white 5px solid;
+}
+
+.sidebar_navlinks {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.sidebar_navlink {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.8rem 0.8rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.sidebar_navlink:hover {
+  background-color: var(--primary-bg);
+}
+
+.sidebar_navlink p {
+  margin-left: 1rem;
+}

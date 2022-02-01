@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import { setStickyNav } from "../redux/miscellaneous/navbarSlice";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
@@ -14,6 +16,8 @@ import TextDescription from "../components/TextDescription";
 import ErrorMessage from "../components/ErrorMessage";
 import Card from "../components/Card";
 
+import { postContacts, clearError } from "../redux/contactSlices/contactSlices";
+
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required().label("First Name"),
   lastname: Yup.string().required().label("Last Name"),
@@ -25,7 +29,21 @@ const validationSchema = Yup.object().shape({
 
 const contact = () => {
   const dispatch = useDispatch();
+  const contacts = useSelector((state) => state.contacts);
+  const { success, error } = contacts;
+
   dispatch(setStickyNav(true));
+
+  useEffect(() => {
+    if (success) {
+      toast.success("We will contact you soon.");
+    }
+
+    if (error) {
+      toast.error(error);
+      dispatch(clearError());
+    }
+  }, [success]);
 
   return (
     <Layout>
@@ -39,6 +57,7 @@ const contact = () => {
         />
         <div className="grid grid-col-2 gap-2">
           <motion.div
+            className="shadow p-2 border-radius"
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{
@@ -57,7 +76,7 @@ const contact = () => {
                 message: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={(values) => console.log(values)}
+              onSubmit={(values) => dispatch(postContacts(values))}
             >
               {({ values, handleSubmit, handleChange, errors, touched }) => (
                 <form onSubmit={handleSubmit}>

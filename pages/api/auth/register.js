@@ -1,16 +1,12 @@
 import nc from "next-connect";
 import dbConnect from "../../../backend/config/db";
-import {
-  getContacts,
-  createContacts,
-  getContact,
-} from "../../../backend/controllers/contactsController";
+import { register } from "../../../backend/controllers/usersController";
 import onError from "../../../backend/middlewares/globalErrorHandler";
 
 dbConnect();
 
 const handler = nc({ onError });
 
-handler.get(getContacts).post(createContacts);
+handler.post(register);
 
 export default handler;

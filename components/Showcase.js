@@ -66,7 +66,7 @@ const Showcase = () => {
             fontSize="2rem"
             fontWeight="bolder"
             margin="1rem"
-            color="green"
+            color="#eee"
           />
           <TextHeading
             text="Network Engineer &"

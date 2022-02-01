@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
-import Styles from "../styles/Layout.module.css";
+import Styles from "../styles/LayoutAdmin.module.css";
 import Footer from "./Footer";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Sidebar from "./Sidebar";
 
 const Layout = ({ children }) => {
   const navbar = useSelector((state) => state.navbar);
@@ -15,8 +15,8 @@ const Layout = ({ children }) => {
     <main
       className={themeSwitch ? `${Styles.main} light-theme` : `${Styles.main}`}
     >
-      <Navbar />
       <motion.div className={Styles.container} initial="hidden" animate="show">
+        <Sidebar />
         {children}
       </motion.div>
       <ToastContainer position="top-center" />
