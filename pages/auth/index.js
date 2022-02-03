@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { signIn, getSession } from "next-auth/react";
 import { useDispatch } from "react-redux";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 import Button from "../../components/Button";
 import Layout from "../../components/Layout";
 import Meta from "../../components/Meta";
@@ -14,17 +16,29 @@ import { setStickyNav } from "../../redux/miscellaneous/navbarSlice";
 import TextDescription from "../../components/TextDescription";
 
 const validationSchema = Yup.object().shape({
-  firstname: Yup.string().required().label("First Name"),
-  lastname: Yup.string().required().label("Last Name"),
   email: Yup.string().email().required().label("Email"),
-  mobile: Yup.string().required().label("Mobile"),
-  purpose: Yup.string().required().label("Purpose"),
-  message: Yup.string().required().label("Message"),
+  password: Yup.string().required().label("password"),
 });
 
 const Login = () => {
   const dispatch = useDispatch();
   dispatch(setStickyNav(true));
+
+  const submitHandler = async (values) => {
+    const { email, password } = values;
+
+    const result = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+
+    if (result.error) {
+      toast.error(result.error);
+    } else {
+      window.location.href = "/admin/dashboard";
+    }
+  };
 
   return (
     <Layout>
@@ -54,7 +68,7 @@ const Login = () => {
                 password: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={(values) => dispatch(postContacts(values))}
+              onSubmit={(values) => submitHandler(values)}
             >
               {({ values, handleSubmit, handleChange, errors, touched }) => (
                 <form onSubmit={handleSubmit}>
@@ -99,3 +113,19 @@ const Login = () => {
 };
 
 export default Login;
+
+export async function getServerSideProps(context) {
+  const session = await getSession({ req: context.req });
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+}

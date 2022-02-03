@@ -15,3 +15,11 @@ export const register = catchAsyncHandler(async (req, res, next) => {
     contacts,
   });
 });
+
+export const getUsers = catchAsyncHandler(async (req, res, next) => {
+  const users = await User.find();
+  res.status(200).json({
+    success: true,
+    users,
+  });
+});
