@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { FaUser, FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
@@ -31,12 +32,14 @@ const contact = () => {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts);
   const { success, error } = contacts;
+  const router = useRouter();
 
   dispatch(setStickyNav(true));
 
   useEffect(() => {
     if (success) {
       toast.success("We will contact you soon.");
+      router.push("/");
     }
 
     if (error) {

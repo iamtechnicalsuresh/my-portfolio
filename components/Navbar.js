@@ -68,6 +68,19 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={Styles.navItem}>
+          <Link href="/services">
+            <a
+              className={
+                router.pathname === "/services"
+                  ? `${Styles.navLink} ${Styles.active}`
+                  : `${Styles.navLink}`
+              }
+            >
+              Services
+            </a>
+          </Link>
+        </li>
+        <li className={Styles.navItem}>
           <Link href="/portfolio">
             <a
               className={

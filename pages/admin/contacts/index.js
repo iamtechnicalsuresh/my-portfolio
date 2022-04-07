@@ -40,11 +40,12 @@ const contact = ({ data }) => {
                 <td>{contact.mobile}</td>
                 <td>{contact.purpose}</td>
                 <td>{contact.message}</td>
-                <td>{<FaEdit size={20} />}</td>
+                <td>{<FaEdit size={20} color="green" />}</td>
                 <td>
                   {
                     <FaTrash
                       size={20}
+                      color="red"
                       onClick={() => deleteContact(contact._id)}
                     />
                   }

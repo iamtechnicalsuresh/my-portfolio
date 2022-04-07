@@ -38,11 +38,12 @@ const Users = ({ data }) => {
                 <td>{user.email}</td>
                 <td>{user.profilePic}</td>
                 <td>{user.isAdmin}</td>
-                <td>{<FaEdit size={20} />}</td>
+                <td>{<FaEdit size={20} color="green" />}</td>
                 <td>
                   {
                     <FaTrash
                       size={20}
+                      color="red"
                       onClick={() => deleteContact(contact._id)}
                     />
                   }
